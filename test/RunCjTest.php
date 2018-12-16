@@ -11,14 +11,14 @@ class RunCjTest {
 			'j32qtb4rcwbzx7rkp5nz0ypk0'
 		]);
 		
-		$product = $cj->assignApi('product-search')->runApi(array(
+		$p = $cj->assignApi('product-search')->runApi(array(
 			// 'advertiser-ids' => $data['adid'],
 			'keywords' => 'samsung',
          'records-per-page' => 10,
          'page-number' => 1
 		))->parseXML();
 		
-		var_dump($product);
+		return $p;
 	}
 	
 	public function getAdvertiser()
@@ -35,7 +35,7 @@ class RunCjTest {
          'page-number' => 1
 		))->parseXML();
 		
-		var_dump($ad);
+		return $ad;
 	}
     
 }
