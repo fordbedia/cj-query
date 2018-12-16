@@ -1,4 +1,4 @@
-# Simple SDK for Commission Juntion pull request
+# Simple SDK for Commission Junction pull request
 
 ## Installation
 
@@ -29,6 +29,6 @@ var_dump($p);
 `product-search`
 `advertiser-lookup`
 
-## Aditional parameters
+## Additional parameters
 
 Please refer to the commission junction [developer docs](https://developers.cj.com/).
