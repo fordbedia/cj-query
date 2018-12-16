@@ -1,6 +1,9 @@
 <?php
 namespace CJQuery\Src\Lib;
 
+use SimpleXMLElement;
+use CJQuery\Src\CjConn;
+
 class Sdk {
   
   /**
@@ -19,7 +22,7 @@ class Sdk {
    * @param string $params
    * @return void
    */
-  private function setParam($params)
+  private function setParam($params): CjConn
   {
     switch($this->scope) {
       case 'product-search':
@@ -45,7 +48,7 @@ class Sdk {
    *
    * @return void
    */
-  public function assignApi($scope)
+  public function assignScope($scope): CjConn
   {
     $this->scope = $scope;
     
@@ -57,7 +60,7 @@ class Sdk {
    *
    * @return void
    */
-  public function runApi($params)
+  public function addParams(array $params): CjConn
   {
     return $this->setParam($params);
   }
@@ -67,7 +70,7 @@ class Sdk {
    *
    * @return void
    */
-  public function parseXML()
+  public function parseXML(): SimpleXMLElement
   {
     return simplexml_load_string($this->xml);
   }
@@ -78,7 +81,7 @@ class Sdk {
    * @param string $p
    * @return void
    */
-  private function extract($p)
+  private function extract(array $p): string
   {
     if(count($p) !== 0){
       $this->params = http_build_query($p);

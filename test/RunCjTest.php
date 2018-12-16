@@ -11,7 +11,7 @@ class RunCjTest {
 			'j32qtb4rcwbzx7rkp5nz0ypk0'
 		]);
 		
-		$p = $cj->assignApi('product-search')->runApi(array(
+		$p = $cj->assignScope('product-search')->addParams(array(
 			// 'advertiser-ids' => $data['adid'],
 			'keywords' => 'samsung',
          'records-per-page' => 10,
@@ -28,7 +28,7 @@ class RunCjTest {
 			'j32qtb4rcwbzx7rkp5nz0ypk0'
 		]);
 		
-		$ad = $cj->assignApi('advertiser-lookup')->runApi(array(
+		$ad = $cj->assignScope('advertiser-lookup')->addParams(array(
 			'requestor-cid' => '',
          'keywords' => 'kitchen sink',
          'records-per-page' => 100,
@@ -42,4 +42,4 @@ class RunCjTest {
 
 $run = new RunCjTest;
 
-echo $run->getProduct();
+// print_r($run->getProduct());
