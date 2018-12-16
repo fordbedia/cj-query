@@ -1,0 +1,27 @@
+{
+    "name": "fordbedia/cj-query",
+    "type": "library",
+    "description": "Simple SDK for CJ",
+    "keywords": [
+        "cj",
+        "api",
+        "sdk"
+    ],
+    "homepage": "https://github.com/fordbedia/cj-query.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ford bedia",
+            "email": "fordbedia@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CJQuery\\Src\\": "src/"
+        }
+    }
+}
