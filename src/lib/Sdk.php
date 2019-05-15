@@ -4,7 +4,7 @@ namespace CJQuery\Src\Lib;
 use SimpleXMLElement;
 use CJQuery\Src\CjConn;
 
-class Sdk {
+abstract class Sdk {
   
   /**
    * Assign variables
@@ -88,5 +88,21 @@ class Sdk {
     }
 
     return $this->params;
-  }
+	}
+	
+	/**
+	 * Undocumented function
+	 *
+	 * @param array $params
+	 * @return Object otherwise false
+	 */
+	public function advertiserLookup($params=[])
+	{
+		if (count($params)) {
+			return $this->assignScope('advertiser-lookup')->addParams($params)->parseXML();
+		}
+		
+		return false;
+	}
+	
 }

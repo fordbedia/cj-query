@@ -20,14 +20,14 @@ class CjConn extends Sdk {
 		$this->conn = $config;
 		
 		/**
-		 * Pass the website id
-		 */
-		$this->websiteId = $config[0];
-		
-		/**
 		 * Pass the cj key
 		 */
-		$this->cjkey = $config[1];
+		$this->cjkey = $config[0];
+		
+		/**
+		 * Pass the website id
+		 */
+		$this->websiteId = $config[1];
 		
 		/**
 		 * Product Search Endpoint
@@ -37,7 +37,7 @@ class CjConn extends Sdk {
 		/**
 		 * Advertiser Look Up Endpoint
 		 */
-    	$this->advertiserLookupEndpoint = 'https://advertiser-lookup.api.cj.com/v2/advertiser-lookup?requestor-cid='.$this->websiteId.'&advertiser-ids=joined&s';
+    	$this->advertiserLookupEndpoint = 'https://advertiser-lookup.api.cj.com/v2/advertiser-lookup?requestor-cid='.$this->websiteId.'&advertiser-ids=joined';
 	}
 	
 }
