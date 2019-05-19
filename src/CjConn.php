@@ -32,12 +32,12 @@ class CjConn extends Sdk {
 		/**
 		 * Product Search Endpoint
 		 */
-		$this->productSearchEndpoint = 'https://product-search.api.cj.com/v2/product-search?website-id='.$this->websiteId.'&';
+		$this->productSearchEndpoint = 'https://product-search.api.cj.com/v2/product-search?website-id='.$this->websiteId;
 		
 		/**
 		 * Advertiser Look Up Endpoint
 		 */
-    	$this->advertiserLookupEndpoint = 'https://advertiser-lookup.api.cj.com/v2/advertiser-lookup?requestor-cid='.$this->websiteId.'&advertiser-ids=joined';
+    	$this->advertiserLookupEndpoint = 'https://advertiser-lookup.api.cj.com/v2/advertiser-lookup?requestor-cid='.$this->websiteId;
 	}
 	
 }

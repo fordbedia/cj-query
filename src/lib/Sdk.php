@@ -105,4 +105,18 @@ abstract class Sdk {
 		return false;
 	}
 	
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function productSearch($params=[])
+	{
+		if (count($params)) {
+			return $this->assignScope('product-search')->addParams($params)->parseXML();
+		}
+		
+		return false;
+	}
+	
 }

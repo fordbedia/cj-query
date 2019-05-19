@@ -7,8 +7,8 @@ class RunCjTest {
   	public function getProduct()
 	{
 		$cj = new \CJQuery\Src\CjConn([
-			'4002dqdpwd911pndbnz92e2b86',
-			'8724259'
+			'<perosnal-token>',
+			'<website-id>'
 		]);
 		
 		$p = $cj->assignScope('product-search')->addParams(array(
@@ -24,8 +24,8 @@ class RunCjTest {
 	public function getAdvertiser()
 	{
 		$cj = new \CJQuery\Src\CjConn([
-			'4002dqdpwd911pndbnz92e2b86',
-			'5153237',
+			'<perosnal-token>',
+			'<website-id>',
 		]);
 		
 		$ad = $cj->assignScope('advertiser-lookup')->addParams(array(
@@ -41,14 +41,28 @@ class RunCjTest {
 	public function getAdvertiserLookup()
 	{
 		$cj = new \CJQuery\Src\CjConn([
-			'4002dqdpwd911pndbnz92e2b86',
-			'5054774',
+			'<perosnal-token>',
+			'<website-id>',
 		]);
 		
 		return $cj->advertiserLookup(array(
 			'records-per-page' => 100,
 			'page-number' => 1,
 			'advertiser-ids' => 'joined'
+		));
+	}
+	
+	public function searchProduct()
+	{
+		$cj = new \CJQuery\Src\CjConn([
+			'<perosnal-token>',
+			'<website-id>',
+		]);
+		
+		return $cj->productSearch(array(
+			'keywords' => 'samsung',
+			'records-per-page' => 10,
+			'page-number' => 1
 		));
 	}
     

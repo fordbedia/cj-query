@@ -12,8 +12,8 @@ Add your credentials website id and your personal access token
 
 ```
 $cj = new \CJQuery\Src\CjConn([
-	'<website-id>',
-	'<personal-access-token>'
+  '<personal-access-token>',
+	'<website-id>'
 ]);
 		
 $p = $cj->assignScope('product-search')->addParams(array(
