@@ -65,9 +65,22 @@ class RunCjTest {
 			'page-number' => 1
 		));
 	}
+	
+	public function searchLink()
+	{
+		$cj = new \CJQuery\Src\CjConn([
+			'<perosnal-token>',
+			'<website-id>',
+		]);
+		
+		return $cj->linkSearch(array(
+			'keywords' => 'Hilka - -Heavy Duty Stapler with 800 Staples',
+			'advertiser-ids' => 849260
+		));
+	}
     
 }
 
 $run = new RunCjTest;
 
-print_r($run->getAdvertiserLookup());
+print_r($run->searchLink());

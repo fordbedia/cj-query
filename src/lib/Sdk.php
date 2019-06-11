@@ -29,7 +29,11 @@ abstract class Sdk {
         $endpoint = $this->productSearchEndpoint;
       break;
       case 'advertiser-lookup':
-        $endpoint = $this->advertiserLookupEndpoint;
+				$endpoint = $this->advertiserLookupEndpoint;
+			break;
+			case 'link-search':
+				$endpoint = $this->linkSearchEndpoint;
+			break;
     }
     
     $ch = curl_init();
@@ -114,6 +118,15 @@ abstract class Sdk {
 	{
 		if (count($params)) {
 			return $this->assignScope('product-search')->addParams($params)->parseXML();
+		}
+		
+		return false;
+	}
+	
+		public function linkSearch($params=[])
+	{
+		if (count($params)) {
+			return $this->assignScope('link-search')->addParams($params)->parseXML();
 		}
 		
 		return false;
