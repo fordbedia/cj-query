@@ -10,7 +10,8 @@ abstract class Sdk {
    * Assign variables
    */
   protected $productSearchEndpoint, 
-            $advertiserLookupEndpoint, 
+						$advertiserLookupEndpoint, 
+						$linkSearchEndpoint,
             $params, 
             $cjkey,
             $xml, 
