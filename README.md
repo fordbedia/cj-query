@@ -29,9 +29,9 @@ var_dump($p);
 `product-search`
 `advertiser-lookup`
 
-```
-Product Search
+## Product Search
 
+```
 $cj = new \CJQuery\Src\CjConn([
   '<perosnal-token>',
   '<website-id>',
@@ -44,9 +44,8 @@ return $cj->productSearch(array(
 ));
 ```
 
+## Link Search
 ```
-Link Search
-
 $cj = new \CJQuery\Src\CjConn([
 	'<perosnal-token>',
 	'<website-id>',
@@ -58,9 +57,8 @@ return $cj->linkSearch(array(
 ));
 ```
 
+## Advertiser Lookup
 ```
-Advertiser Lookup
-
 $cj = new \CJQuery\Src\CjConn([
 	'<perosnal-token>',
 	'<website-id>',
